@@ -22,8 +22,8 @@ C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.Cor
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.Owin.Security.dll
 C:\project\assignment1\assignment1.Tests\bin\Debug\Owin.dll
-C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\project\assignment1\assignment1.Tests\bin\Debug\EntityFramework.dll
+C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\project\assignment1\assignment1.Tests\bin\Debug\assignment1.pdb
@@ -42,8 +42,8 @@ C:\project\assignment1\assignment1.Tests\bin\Debug\System.Web.Optimization.xml
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.Owin.Security.xml
-C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\project\assignment1\assignment1.Tests\bin\Debug\EntityFramework.xml
+C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\project\assignment1\assignment1.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\project\assignment1\assignment1.Tests\obj\Debug\assignment1.Tests.csprojResolveAssemblyReference.cache
