@@ -201,7 +201,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\camera.cs" />
-    <Compile Include="Models\cameraStoreModel.cs" />
+    <Compile Include="Models\CameraCompaniesModel.cs" />
     <Compile Include="Models\company.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -265,16 +265,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\companies\Create.cshtml" />
-    <Content Include="Views\companies\Delete.cshtml" />
-    <Content Include="Views\companies\Details.cshtml" />
-    <Content Include="Views\companies\Edit.cshtml" />
-    <Content Include="Views\companies\Index.cshtml" />
     <Content Include="Views\cameras\Create.cshtml" />
     <Content Include="Views\cameras\Delete.cshtml" />
     <Content Include="Views\cameras\Details.cshtml" />
     <Content Include="Views\cameras\Edit.cshtml" />
     <Content Include="Views\cameras\Index.cshtml" />
+    <Content Include="Views\companies\Create.cshtml" />
+    <Content Include="Views\companies\Delete.cshtml" />
+    <Content Include="Views\companies\Details.cshtml" />
+    <Content Include="Views\companies\Edit.cshtml" />
+    <Content Include="Views\companies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

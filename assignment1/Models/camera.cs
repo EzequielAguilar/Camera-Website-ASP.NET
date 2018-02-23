@@ -8,17 +8,23 @@ namespace assignment1.Models
 
     public partial class camera
     {
+        public int companyID { get; set; }
+
         public int cameraID { get; set; }
 
         [Required]
-        [StringLength(10)]
-        public string Type { get; set; }
+        [StringLength(50)]
+        public string Model { get; set; }
 
         public int Megapixels { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal cameraPrice { get; set; }
+        [Display(Name = "Price")]
+        public decimal? cameraPrice { get; set; }
 
-        public int companyID { get; set; }
+        [StringLength(400)]
+        public string image { get; set; }
+
+        public virtual company company { get; set; }
     }
 }

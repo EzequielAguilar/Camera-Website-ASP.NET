@@ -5,10 +5,10 @@ namespace assignment1.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class cameraStoreModel : DbContext
+    public partial class CameraCompaniesModel : DbContext
     {
-        public cameraStoreModel()
-            : base("name=cameraStoreModel")
+        public CameraCompaniesModel()
+            : base("name=CameraCompaniesModel")
         {
         }
 
@@ -18,12 +18,16 @@ namespace assignment1.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<camera>()
-                .Property(e => e.Type)
+                .Property(e => e.Model)
                 .IsUnicode(false);
 
             modelBuilder.Entity<camera>()
                 .Property(e => e.cameraPrice)
                 .HasPrecision(19, 4);
+
+            modelBuilder.Entity<camera>()
+                .Property(e => e.image)
+                .IsUnicode(false);
 
             modelBuilder.Entity<company>()
                 .Property(e => e.Name)
@@ -34,8 +38,21 @@ namespace assignment1.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<company>()
-                .Property(e => e.Value)
-                .HasPrecision(19, 4);
+                .Property(e => e.Logo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<company>()
+                .Property(e => e.CEO)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<company>()
+                .Property(e => e.stockName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<company>()
+                .HasMany(e => e.cameras)
+                .WithRequired(e => e.company)
+                .WillCascadeOnDelete(false);
         }
     }
 }

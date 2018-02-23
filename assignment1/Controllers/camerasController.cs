@@ -12,12 +12,13 @@ namespace assignment1.Controllers
 {
     public class camerasController : Controller
     {
-        private cameraStoreModel db = new cameraStoreModel();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: cameras
         public ActionResult Index()
         {
-            return View(db.cameras.ToList());
+            var cameras = db.cameras.Include(c => c.company);
+            return View(cameras.ToList());
         }
 
         // GET: cameras/Details/5
@@ -38,6 +39,7 @@ namespace assignment1.Controllers
         // GET: cameras/Create
         public ActionResult Create()
         {
+            ViewBag.companyID = new SelectList(db.companies, "companyID", "Name");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace assignment1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "cameraID,Type,Megapixels,cameraPrice,companyID")] camera camera)
+        public ActionResult Create([Bind(Include = "cameraID,companyID,Model,Megapixels,cameraPrice,image")] camera camera)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace assignment1.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.companyID = new SelectList(db.companies, "companyID", "Name", camera.companyID);
             return View(camera);
         }
 
@@ -70,6 +73,7 @@ namespace assignment1.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.companyID = new SelectList(db.companies, "companyID", "Name", camera.companyID);
             return View(camera);
         }
 
@@ -78,7 +82,7 @@ namespace assignment1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "cameraID,Type,Megapixels,cameraPrice,companyID")] camera camera)
+        public ActionResult Edit([Bind(Include = "cameraID,companyID,Model,Megapixels,cameraPrice,image")] camera camera)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace assignment1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.companyID = new SelectList(db.companies, "companyID", "Name", camera.companyID);
             return View(camera);
         }
 

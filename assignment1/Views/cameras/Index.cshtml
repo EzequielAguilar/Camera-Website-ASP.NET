@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<assignment1.Models.camera>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cameras";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Cameras</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,7 +13,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Type)
+            @Html.DisplayNameFor(model => model.company.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Megapixels)
@@ -22,7 +25,7 @@
             @Html.DisplayNameFor(model => model.cameraPrice)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.companyID)
+            @Html.DisplayNameFor(model => model.image)
         </th>
         <th></th>
     </tr>
@@ -30,16 +33,21 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Type)
+            @Html.DisplayFor(modelItem => item.company.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Megapixels)
+            MP
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.cameraPrice)
+            $
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.companyID)
+            @Html.DisplayFor(modelItem => item.image)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.cameraID }) |

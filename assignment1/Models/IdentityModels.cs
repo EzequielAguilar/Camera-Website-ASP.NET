@@ -29,5 +29,9 @@ namespace assignment1.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<assignment1.Models.camera> cameras { get; set; }
+
+        public System.Data.Entity.DbSet<assignment1.Models.company> companies { get; set; }
     }
 }

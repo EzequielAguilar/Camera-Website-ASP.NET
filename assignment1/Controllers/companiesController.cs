@@ -12,13 +12,11 @@ namespace assignment1.Controllers
 {
     public class companiesController : Controller
     {
-        private cameraStoreModel db = new cameraStoreModel();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: companies
         public ActionResult Index()
         {
-
-
             return View(db.companies.ToList());
         }
 
@@ -48,7 +46,7 @@ namespace assignment1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "companyID,Name,Address,Value")] company company)
+        public ActionResult Create([Bind(Include = "companyID,Name,Address,Logo,Phone,CEO,numEmployees,stockName")] company company)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +78,7 @@ namespace assignment1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "companyID,Name,Address,Value")] company company)
+        public ActionResult Edit([Bind(Include = "companyID,Name,Address,Logo,Phone,CEO,numEmployees,stockName")] company company)
         {
             if (ModelState.IsValid)
             {
