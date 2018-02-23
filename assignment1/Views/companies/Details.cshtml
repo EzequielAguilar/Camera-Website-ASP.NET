@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@Model.Name Details</h2>
 
 <div>
     <h4>company</h4>
@@ -32,7 +32,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Logo)
+
+            @*@Html.DisplayFor(model => model.Logo)
+                Why isn't there a foreach loop in this details page ?*@
+            <img src="~/Content/Images/placeholder.png" alt="" width="40" />
         </dd>
 
         <dt>

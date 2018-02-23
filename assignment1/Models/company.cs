@@ -24,7 +24,6 @@ namespace assignment1.Models
         [StringLength(150)]
         public string Address { get; set; }
 
-        [Required]
         [StringLength(400)]
         public string Logo { get; set; }
 
